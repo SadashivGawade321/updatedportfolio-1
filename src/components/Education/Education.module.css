@@ -1,0 +1,521 @@
+.educationSection {
+    padding: var(--section-padding);
+    background: var(--gradient-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Particle Container */
+.particleContainer {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(1px);
+    will-change: transform;
+}
+
+/* Background Elements */
+.backgroundGlow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.3;
+    z-index: 0;
+    animation: float 8s ease-in-out infinite;
+}
+
+.floatingOrb {
+    position: absolute;
+    bottom: -200px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.2;
+    z-index: 0;
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px);
+    }
+    50% {
+        transform: translateY(30px) translateX(20px);
+    }
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--container-padding);
+    position: relative;
+    z-index: 2;
+}
+
+.titleWrapper {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.sectionTitle {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin: 0 0 12px 0;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+/* Carousel Layout */
+.carouselContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.carouselWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    width: 100%;
+}
+
+/* Navigation Buttons */
+.navButton {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    border: 2px solid rgba(99, 102, 241, 0.4);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-normal);
+    flex-shrink: 0;
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.navButton::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.navButton:hover {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+    transform: scale(1.12);
+}
+
+.navButton:hover::before {
+    opacity: 1;
+}
+
+/* Card Container */
+.cardContainer {
+    flex: 1;
+    max-width: 650px;
+    position: relative;
+    padding: 40px 30px;
+    border-radius: 24px;
+    transition: all var(--transition-slow);
+}
+
+/* Education Card */
+.educationCard {
+    position: relative;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 45px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    transition: all var(--transition-normal);
+    overflow: hidden;
+}
+
+.educationCard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent 70%);
+    pointer-events: none;
+}
+
+.cardBackground {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.educationCard:hover {
+    border-color: var(--primary);
+    box-shadow: 0 30px 80px rgba(99, 102, 241, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Status Badge */
+.statusBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1.5px solid;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(99, 102, 241, 0.1);
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    display: inline-block;
+    animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Card Header */
+.cardHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.iconWrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.35);
+    position: relative;
+}
+
+.iconWrapper::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 18px;
+    background: inherit;
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0.5;
+}
+
+.typeAndTitle {
+    flex: 1;
+}
+
+.type {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 8px;
+    opacity: 0.85;
+}
+
+.degree {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.2;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.institution {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-weight: 500;
+    background: linear-gradient(90deg, var(--text-secondary), var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Meta Information */
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 24px;
+    padding: 16px 0;
+    flex-wrap: wrap;
+}
+
+.metaItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.metaDivider {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.3), transparent);
+    margin: 0 20px;
+}
+
+.metaLabel {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+}
+
+.metaValue {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0 0 28px 0;
+}
+
+/* Highlights */
+.highlights {
+    border-top: 1px solid rgba(99, 102, 241, 0.2);
+    padding-top: 24px;
+}
+
+.highlightsTitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin: 0 0 14px 0;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.highlightsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.highlightTag {
+    display: inline-block;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.08));
+    border: 1.5px solid;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    transition: all var(--transition-normal);
+    backdrop-filter: blur(8px);
+}
+
+.highlightTag:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.12));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.2);
+}
+
+/* Indicators */
+.indicators {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.indicator:hover {
+    transform: scale(1.4);
+}
+
+.activeIndicator {
+    transform: scale(1.6);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .carouselWrapper {
+        gap: 20px;
+    }
+
+    .educationCard {
+        padding: 32px;
+    }
+
+    .degree {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .educationSection {
+        padding: 80px 0;
+    }
+
+    .titleWrapper {
+        margin-bottom: 50px;
+    }
+
+    .carouselWrapper {
+        gap: 15px;
+    }
+
+    .navButton {
+        width: 44px;
+        height: 44px;
+    }
+
+    .cardContainer {
+        padding: 20px 15px;
+    }
+
+    .educationCard {
+        padding: 24px;
+    }
+
+    .cardHeader {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .iconWrapper {
+        width: 70px;
+        height: 70px;
+    }
+
+    .degree {
+        font-size: 1.3rem;
+    }
+
+    .meta {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .metaDivider {
+        display: none;
+    }
+
+    .metaItem {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .backgroundGlow,
+    .floatingOrb {
+        display: none;
+    }
+
+    .carouselWrapper {
+        gap: 10px;
+    }
+
+    .navButton {
+        width: 40px;
+        height: 40px;
+    }
+
+    .educationCard {
+        padding: 16px;
+    }
+
+    .cardHeader {
+        margin-bottom: 20px;
+    }
+
+    .degree {
+        font-size: 1.1rem;
+    }
+
+    .institution {
+        font-size: 0.9rem;
+    }
+
+    .highlightsList {
+        gap: 8px;
+    }
+
+    .highlightTag {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+}
