@@ -50,57 +50,48 @@ const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN || ''
 
 // Custom descriptions for known projects
 const projectDescriptions = {
-    'AsusTufFanControl_Linux': 'A powerful system control utility for ASUS TUF and ROG laptops on Linux. Features advanced Fan Control, Battery Health, and Aura Sync RGB.',
-    'Vulnerability_Scanner': 'Automated security scanning tool for web applications. Detects SQLi, XSS, CSRF, and SSRF vulnerabilities.',
-    '403-bypass3r': 'Advanced script to bypass 403 Forbidden errors during penetration testing and bug bounty hunting.',
-    'Smart_Attendance': 'Face recognition based attendance system using Python and OpenCV. Efficient and automated.',
-    'Land_Registry_Using_BlockChain': 'Blockchain-based land registry system built with Solidity and Web3.js.',
+    'Neural-Network-Project': 'Deep learning neural network implementation with TensorFlow and Keras',
+    'ML-Data-Analysis': 'Machine learning data analysis and visualization with pandas and scikit-learn',
+    'updatedportfolio-1': 'Interactive AI/ML portfolio website built with React and Vite',
 }
 
 // Custom images for known projects
-const projectImages = {
-    'AsusTufFanControl_Linux': 'https://raw.githubusercontent.com/Karthigaiselvam-R-official/AsusTufFanControl_Linux/main/resources/SystemInfo.png',
-    '403-bypass3r': 'https://raw.githubusercontent.com/Karthigaiselvam-R-official/403-bypass3r/main/Pasted%20image.png',
-    'Smart_Attendance': 'https://raw.githubusercontent.com/Karthigaiselvam-R-official/Smart_Attendance/main/Screenshot%202024-10-06%20194055.png',
-}
+const projectImages = {}
 
 // Fallback projects when GitHub API fails
 const fallbackProjects = [
     {
         id: 1,
-        name: 'AsusTufFanControl_Linux',
-        full_name: 'Karthigaiselvam-R-official/AsusTufFanControl_Linux',
-        description: 'A powerful system control utility for ASUS TUF and ROG laptops on Linux',
-        customDescription: 'A powerful system control utility for ASUS TUF and ROG laptops on Linux. Features advanced Fan Control, Battery Health, and Aura Sync RGB.',
-        html_url: 'https://github.com/Karthigaiselvam-R-official/AsusTufFanControl_Linux',
+        name: 'Neural-Network-Project',
+        full_name: 'SadashivGawade321/Neural-Network-Project',
+        description: 'Deep learning neural network implementation with TensorFlow and Keras',
+        customDescription: 'Implementing and training deep neural networks for image classification and pattern recognition tasks.',
+        html_url: 'https://github.com/SadashivGawade321/Neural-Network-Project',
         language: 'Python',
-        stargazers_count: 45,
-        forks_count: 12,
-        image: projectImages['AsusTufFanControl_Linux'],
+        stargazers_count: 0,
+        forks_count: 0,
     },
     {
         id: 2,
-        name: '403-bypass3r',
-        full_name: 'Karthigaiselvam-R-official/403-bypass3r',
-        description: 'Advanced script to bypass 403 Forbidden errors during penetration testing',
-        customDescription: 'Advanced script to bypass 403 Forbidden errors during penetration testing and bug bounty hunting.',
-        html_url: 'https://github.com/Karthigaiselvam-R-official/403-bypass3r',
+        name: 'ML-Data-Analysis',
+        full_name: 'SadashivGawade321/ML-Data-Analysis',
+        description: 'Machine learning data analysis and visualization with pandas and scikit-learn',
+        customDescription: 'Comprehensive data analysis, visualization, and machine learning pipeline development with real-world datasets.',
+        html_url: 'https://github.com/SadashivGawade321/ML-Data-Analysis',
         language: 'Python',
-        stargazers_count: 28,
-        forks_count: 8,
-        image: projectImages['403-bypass3r'],
+        stargazers_count: 0,
+        forks_count: 0,
     },
     {
         id: 3,
-        name: 'Smart_Attendance',
-        full_name: 'Karthigaiselvam-R-official/Smart_Attendance',
-        description: 'Face recognition based attendance system using Python and OpenCV',
-        customDescription: 'Face recognition based attendance system using Python and OpenCV. Efficient and automated.',
-        html_url: 'https://github.com/Karthigaiselvam-R-official/Smart_Attendance',
-        language: 'Python',
-        stargazers_count: 35,
-        forks_count: 10,
-        image: projectImages['Smart_Attendance'],
+        name: 'updatedportfolio-1',
+        full_name: 'SadashivGawade321/updatedportfolio-1',
+        description: 'Interactive AI/ML portfolio website built with React and Vite',
+        customDescription: 'Modern, responsive portfolio showcasing AI/ML projects with animated intro, skill graphs, and interactive components.',
+        html_url: 'https://github.com/SadashivGawade321/updatedportfolio-1',
+        language: 'JavaScript',
+        stargazers_count: 0,
+        forks_count: 0,
     },
 ]
 
