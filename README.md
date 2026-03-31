@@ -1,112 +1,142 @@
-# 🔐 Karthigaiselvam R - Portfolio
+# 🤖 Sadashiv Gawade - AI/ML Portfolio
 
-> **Security Researcher & Software Developer**  
-> *Exploring the intersection of secure infrastructure and modern web experiences.*
+> **AI/ML Student & Full Stack Developer**  
+> *Building intelligent systems with neural networks, data science, and modern web technologies.*
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![Cyber Security](https://img.shields.io/badge/Theme-Cyber_Security-00ff88?style=for-the-badge&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![AI/ML](https://img.shields.io/badge/Theme-AI%2FML-FFA116?style=for-the-badge)
 
-A highly interactive, cyber-security themed portfolio website built to showcase penetration testing achievements, software development projects, and professional experience.
+A highly interactive, modern portfolio website built to showcase AI/ML projects, machine learning expertise, full-stack development skills, and educational background.
 
----
-
-## 📸 Screenshots
-
-<p align="center">
-  <img src="public/images/image.png" alt="Hero Section" width="100%"/>
-</p>
-
-<p align="center">
-  <img src="public/images/image copy.png" alt="About Section" width="48%"/>
-  <img src="public/images/image copy 2.png" alt="Experience Section" width="48%"/>
-</p>
-
-<p align="center">
-  <img src="public/images/image copy 3.png" alt="Skills Section" width="48%"/>
-  <img src="public/images/image copy 4.png" alt="Projects Section" width="48%"/>
-</p>
-
-<p align="center">
-  <img src="public/images/image copy 5.png" alt="Contact Section" width="100%"/>
-</p>
+**🌐 Live Portfolio**: [updatedportfolio-1.vercel.app](https://updatedportfolio-1.vercel.app)
 
 ---
 
 ## ✨ Key Features
 
-- **🎨 Cyber Aesthetic**: Custom neon design system with glassmorphism, matrix rain, and glitch effects.
-- **📱 Responsive Design**: Fully optimized for Desktop, Laptop, Tablet, and Mobile devices.
-- **✉️ Secure Contact Form**: 
-    - Integrated with **EmailJS** for serverless, secure email delivery.
-    - Custom **Toast Notification System** for real-time user feedback.
-    - Rate limiting and input validation.
-- **🏗️ Dynamic Architecture**:
-    - **Experience Timeline**: Vertical interactive timeline connecting internships to LinkedIn posts.
-    - **Achievement Carousel**: Auto-playing image gallery for hackathon wins and certifications.
-    - **Project Hub**: GitHub API integration to fetch and display live repository statistics.
+- **🎨 Modern Theme**: LeetCode Orange & Neural Network aesthetic with glassmorphism
+- **📱 Fully Responsive**: Optimized for Desktop, Tablet, and Mobile devices
+- **⚡ Interactive Animations**:
+  - Animated intro sequence with AI/ML code rainfall and neural network visualization
+  - 4-second delay between intro and hero for smooth transitions
+  - Smooth scroll-triggered animations throughout
+  - Interactive skill matrix visualization
+  
+- **🔧 Key Sections**:
+  - **Hero**: Dynamic name animation with typewriter effect and neural network background
+  - **Skills**: Visual skill matrix with AI/ML, Development, and Tools categories
+  - **Projects**: Live GitHub integration showing your repositories
+  - **Education**: Interactive carousel with particle effects
+  - **Contact**: Functional contact form with Formspree integration
+  - **Experience**: Professional timeline with wave animations
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React 18
-- **Build Tool**: Vite
-- **Animations**: Framer Motion
-- **Styling**: CSS Modules with CSS Variables (Theming)
-- **Email Service**: EmailJS
+- **Frontend**: React 18.3.1
+- **Build Tool**: Vite 6.4.1
+- **Animations**: Framer Motion v11
+- **Styling**: CSS Modules with CSS Variables
+- **Form**: Formspree integration
 - **Icons**: Lucide React / Custom SVG
+- **GitHub API**: Live project fetching
 
 ## 🚀 Quick Start
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Karthigaiselvam-R-official/Karthigaiselvam-dev.git
+   git clone https://github.com/SadashivGawade321/updatedportfolio-1.git
+   cd updatedportfolio-1
    ```
 
 2. **Install dependencies**
    ```bash
-   cd Karthigaiselvam-dev
    npm install
    ```
 
-3. **Start local server**
+3. **Create .env.local file** (for GitHub API)
+   ```
+   VITE_GITHUB_TOKEN=your_github_token_here
+   ```
+
+4. **Start local server**
    ```bash
    npm run dev
    ```
 
-4. **Build for production**
+5. **Build for production**
    ```bash
    npm run build
    ```
 
 ## 📁 Project Structure
 
-```bash
+```
 src/
 ├── components/
-│   ├── Navbar/       # Responsive navigation with 'terminal' style
-│   ├── Hero/         # 3D interactive landing section
-│   ├── About/        # Profile & Achievements with Carousel
-│   ├── Experience/   # Vertical Professional Timeline
-│   ├── Projects/     # GitHub API integrated project cards
-│   ├── Contact/      # EmailJS form with validation
-│   └── Toast/        # Custom notification system
+│   ├── Navbar/          # Responsive navigation
+│   ├── Intro/           # Animated intro with neural network & code
+│   ├── Hero/            # 3D interactive landing section
+│   ├── About/           # Profile & resume
+│   ├── Education/       # Carousel with particle effects
+│   ├── Experience/      # Professional timeline
+│   ├── Skills/          # Skill matrix visualization
+│   ├── Projects/        # GitHub API integrated cards
+│   ├── Contact/         # Formspree contact form
+│   └── Footer/          # Social links & info
+├── context/
+│   └── ThemeContext.jsx # Theme management
 ├── styles/
-│   └── global.css    # Cyber-theme variables & animations
-└── main.jsx          # Entry point
+│   └── global.css       # AI/ML theme variables & animations
+└── main.jsx             # Entry point
 ```
 
-## 📧 Contact Configuration
+## 🔧 Configuration
 
-To make the contact form work in your own fork:
+### Contact Form
+The contact form uses **Formspree**. It's pre-configured to send emails to:
+- Email: `24030331246501@dabtu.ac.in`
 
-1. Create an account on [EmailJS](https://www.emailjs.com/).
-2. Create a standardized email template.
-3. Update specific keys in `src/components/Contact/Contact.jsx` or use Environment Variables.
+To change this, update in `src/components/Contact/Contact.jsx`:
+```javascript
+const FORMSPREE_ID = 'f/xdapzypr' // Replace with your form ID
+```
+
+### GitHub Projects
+Projects are fetched live from GitHub. Update the username in `src/components/Projects/Projects.jsx`:
+```javascript
+const GITHUB_USERNAME = 'SadashivGawade321'
+```
+
+## 📦 Environment Variables
+
+Create `.env.local` in the root directory:
+```
+VITE_GITHUB_TOKEN=ghp_your_token_here
+```
+
+This increases GitHub API rate limits from 60 to 5000 requests/hour.
+
+## 🎨 Customization
+
+All theme colors and animations are defined in `src/styles/global.css`:
+```css
+:root {
+  --primary: #FFA116;        /* Orange */
+  --secondary: #FF6B35;      /* Deep Orange */
+  --accent: #FFD60A;         /* Yellow */
+  --bg-dark: #0d1117;        /* Dark background */
+  /* ... more variables ... */
+}
+```
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ---
-*Built with 💚 and 💻 by [Karthigaiselvam R](https://github.com/Karthigaiselvam-R-official)*
+
+**Built with 💻 by [Sadashiv Gawade](https://github.com/SadashivGawade321)**  
+AI/ML Student | Full Stack Developer | Data Science Enthusiast
