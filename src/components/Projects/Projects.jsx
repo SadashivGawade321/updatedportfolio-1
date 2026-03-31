@@ -335,7 +335,7 @@ function Projects() {
                             <span className="gradient-text">Featured Project Vault</span>
                         </h2>
                         <p className="section-subtitle">
-                            Security tools and applications - fetched live from GitHub
+                            AI/ML and full-stack projects - fetched live from GitHub
                             {loading && <Loader />}
                             {error && <span style={{ color: '#ff5555', marginLeft: '10px' }}>Error: {error}</span>}
                         </p>
